@@ -1,5 +1,7 @@
 # DacFx Deployment Contributors
 
+[![Join the chat at https://gitter.im/DacFxDeploymentContributors/Contributors](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DacFxDeploymentContributors/Contributors?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What is this?
 
 This is a repository of some useful deployment contributors that anyone can use. Please feel free to submit any contributors that you have written as pull requests.
