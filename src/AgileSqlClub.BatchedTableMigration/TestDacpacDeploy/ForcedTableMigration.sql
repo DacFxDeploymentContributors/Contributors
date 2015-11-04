@@ -1,7 +1,14 @@
 ﻿CREATE TABLE [dbo].[ForcedTableMigration]
 (
 	[Id] INT NOT NULL PRIMARY KEY,
-	[Name] varchar(25) not null,
 	[count] int not null,
-	[total] as [Id] * [count]
+	[Name] varchar(25) not null,	
+	[total] as [Id] * [count],
+	[new] int not null,
+	constraint fk_one foreign key (new) references r(id)
 )
+go 
+create table r
+(
+ id int not null primary key
+ )

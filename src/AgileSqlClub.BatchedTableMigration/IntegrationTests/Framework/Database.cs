@@ -24,6 +24,8 @@ namespace IntegrationTests.Framework
             RunSql(@"CREATE TABLE [dbo].[ForcedTableMigration]
 (
 	[count] int not null,
+    [ddd] varchar(1) null,
+
 )", db_name);
         }
 

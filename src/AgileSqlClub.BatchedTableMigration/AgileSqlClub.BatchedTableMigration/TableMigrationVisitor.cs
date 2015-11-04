@@ -20,12 +20,11 @@ namespace AgileSqlClub.BatchedTableMigration
             NewStatement.Length = node.FragmentLength;
 
             var whyle = BuildWhileStatement(node.InsertSpecification);
-
-
+            
             var scriptGen = new Sql110ScriptGenerator();
             string script;
             scriptGen.GenerateScript(whyle, out script);
-            //Console.WriteLine(script);
+            
 
             NewStatement.NewText = script;
         }
@@ -37,8 +36,7 @@ namespace AgileSqlClub.BatchedTableMigration
             select top X from dbo.another_table(columns...)
 
             to:
-
-            
+                        
             while (select count(*) from dbo.table) > 0
             begin            
                 with to_delete(
@@ -79,10 +77,7 @@ namespace AgileSqlClub.BatchedTableMigration
             var block = new BeginEndBlockStatement();
 
             block.StatementList = new StatementList();
-            //block.StatementList.Statements.Add(BuildInsertWithTop(originalInsert));
             block.StatementList.Statements.Add(BuildDelete(originalInsert));
-
-
             return block;
         }
 
@@ -146,22 +141,7 @@ namespace AgileSqlClub.BatchedTableMigration
 
             return specification;
         }
-
-        private TSqlStatement BuildInsertWithTop(InsertSpecification originalInsert)
-        {
-            ((originalInsert.InsertSource as SelectInsertSource).Select as QuerySpecification).TopRowFilter = new TopRowFilter
-            {
-                Expression = new IntegerLiteral
-                {
-                    Value = _rowCount
-                }
-            };
-
-            return new InsertStatement
-            {
-                InsertSpecification = originalInsert
-            };
-        }
+        
 
         private QuerySpecification BuildSelectSubQuery(QuerySpecification originalSelectQuery)
         {
