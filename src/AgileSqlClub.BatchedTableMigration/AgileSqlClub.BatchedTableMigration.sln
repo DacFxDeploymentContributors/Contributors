@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileSqlClub.BatchedTableMigration", "AgileSqlClub.BatchedTableMigration\AgileSqlClub.BatchedTableMigration.csproj", "{ECA36CB2-7206-4F1D-A4AA-79ECD62FF4EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AAEC4142-BC16-4201-B3BB-1DB0AD4F4D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TestDacpacDeploy", "TestDacpacDeploy\TestDacpacDeploy.sqlproj", "{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECA36CB2-7206-4F1D-A4AA-79ECD62FF4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA36CB2-7206-4F1D-A4AA-79ECD62FF4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA36CB2-7206-4F1D-A4AA-79ECD62FF4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA36CB2-7206-4F1D-A4AA-79ECD62FF4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B4BE0E5-3CE6-45B8-8E4E-925A8F54B498} = {AAEC4142-BC16-4201-B3BB-1DB0AD4F4D7D}
+		{7392F535-A426-4614-B8D2-AF0BEEDFDAA7} = {AAEC4142-BC16-4201-B3BB-1DB0AD4F4D7D}
+	EndGlobalSection
+EndGlobal
