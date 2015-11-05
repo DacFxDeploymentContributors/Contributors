@@ -1,0 +1,20 @@
+EditionAwareCreateIndex
+
+The point of this is that when you have enterprise you can create an index using WITH(ONLINE=on) but if you try to do that with standard edition it will fail as it doesn't support it.
+
+There is no way (that I know of) to see what edition you are targetting from a deployment contributor so there are two ways to use it, by default it will take an existing create index statement and wrap it in a check for the edition. This means that no matter what edition you have you can use this online if you have enterprise.
+
+If you know what edition you have you can pass either:
+
+ /p:AdditionalDeploymentContributorArguments==EditionAwareCreateIndexForceEdition=Enterprise
+
+and you will get WITH(ONLINE=ON), or:
+
+ /p:AdditionalDeploymentContributorArguments==EditionAwareCreateIndexForceEdition=Standard
+
+and you will not get ONLINE.
+
+To load this contributor add:
+
+/p:AdditionalDeploymentContributors=EditionAwareCreateIndex
+
